@@ -1,0 +1,8 @@
+name         'nginx'
+version      '0.0.1'
+author       'devalone'
+license      'Apache License Version 2.0'
+summary      'Puppet nginx management module'
+description  'This module can be used for basic nginx management'
+project_page 'http://xxx/nginx'
+

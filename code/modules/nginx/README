@@ -1,0 +1,8 @@
+# Nginx Module
+devalone <devalone@126.com>
+This module manage nginx from within puppet.
+
+USEAGE:
+# standard class
+include nginx
+
