@@ -4,5 +4,4 @@ node default {
   }
 }
 
-import "nodes/*.pp"
-
+include localtime

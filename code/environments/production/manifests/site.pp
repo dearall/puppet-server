@@ -4,6 +4,7 @@ node default {
   }
 }
 
+include localtime
 
 node 'dnsmasq.sansovo.org' {
   class { 'ntp':

@@ -4,6 +4,8 @@ node default {
   }
 }
 
+include localtime
+
 class { 'ntp':
   servers => ['192.168.10.2','cn.ntp.org.cn'],
 }
