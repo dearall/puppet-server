@@ -6,9 +6,9 @@ host { 'self':
 }
 
 file { 'motd':
-  ensure => file,
-  path   => '/tmp/motd',
-  mode   => '0644',
+  ensure  => file,
+  path    => '/tmp/motd',
+  mode    => '0644',
   content => "Welcome to ${hostname},\na ${operatingsystem} island in the sea of ${domain}.\n",
 }
 

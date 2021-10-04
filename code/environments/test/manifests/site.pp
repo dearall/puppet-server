@@ -7,8 +7,8 @@ node default {
 include localtime
 
 class { 'ntp':
-  servers    => ['192.168.10.2 prefer','cn.ntp.org.cn'],
-  restrict   => [
+  servers  => ['192.168.10.2 prefer','cn.ntp.org.cn'],
+  restrict => [
     # By default, exchange time with everybody, but don't allow configuration.
     '-4 default notrap nomodify nopeer noquery',
     '-6 default notrap nomodify nopeer noquery',
