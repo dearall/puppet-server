@@ -1,6 +1,6 @@
 node default {
   notify { 'default node':
-    message => "[test] environment. no match your node, this is default node.",
+    message => '[test] environment. no match your node, this is default node.',
   }
 }
 
@@ -21,7 +21,7 @@ node 'test.sansovo.org'  {
 
   include test
 
-  if tagged('/tmp/filebucket') { 
+  if tagged('/tmp/filebucket') {
     notify { 'so path tag': }
   }
 
