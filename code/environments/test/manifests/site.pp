@@ -38,7 +38,7 @@ node 'test.sansovo.org'  {
     notify { 'so path tag': }
   }
 
-  if tagged('filebucket') { 
+  if tagged('filebucket') {
     notify { 'so filebucket tag': }
   }
   if tagged('test') {
@@ -51,6 +51,13 @@ node 'tomcat.sansovo.org' {
     ensure  => 'present',
     version => '11',
     java    => 'jdk',
+  }
+
+  tomcat::install { '/opt/tomcat9':
+    source_url => 'https://mirrors.tuna.tsinghua.edu.cn/apache/tomcat/tomcat-9/v9.0.54/bin/apache-tomcat-9.0.54.tar.gz',
+  }
+  tomcat::instance { 'default':
+    catalina_home => '/opt/tomcat9',
   }
 }
 
