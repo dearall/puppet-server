@@ -46,4 +46,11 @@ node 'test.sansovo.org'  {
   }
 }
 
+node 'tomcat.sansovo.org' {
+  java::adopt { 'jdk11' :
+    ensure  => 'present',
+    version => '11',
+    java    => 'jdk',
+  }
+}
 
