@@ -25,7 +25,6 @@ class { 'ntp':
 
 
 node 'test.sansovo.org'  {
-
   include user::virtual
   include user::dba
   include user::sysadmin
@@ -47,17 +46,6 @@ node 'test.sansovo.org'  {
 }
 
 node 'tomcat.sansovo.org' {
-  java::adopt { 'jdk11' :
-    ensure  => 'present',
-    version => '11',
-    java    => 'jdk',
-  }
-
-  tomcat::install { '/opt/tomcat9':
-    source_url => 'https://mirrors.tuna.tsinghua.edu.cn/apache/tomcat/tomcat-9/v9.0.54/bin/apache-tomcat-9.0.54.tar.gz',
-  }
-  tomcat::instance { 'default':
-    catalina_home => '/opt/tomcat9',
-  }
+  include tomcat
 }
 
