@@ -1,5 +1,5 @@
 # 通过 puppetlabs-tomcat 6.1.1 模块安装 tomcat9
-class tomcat {
+class tomcat9 {
   java::adopt { 'jdk11' :
     ensure  => 'present',
     version => '11',

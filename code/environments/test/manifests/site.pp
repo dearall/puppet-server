@@ -46,6 +46,6 @@ node 'test.sansovo.org'  {
 }
 
 node 'tomcat.sansovo.org' {
-  include tomcat
+  include tomcat9
 }
 
