@@ -11,6 +11,6 @@ class tomcat9 {
   }
   tomcat::instance { 'default':
     catalina_home => '/opt/tomcat9',
-    catalina_base => '/opt/tomcat9/first',
+    catalina_base => '/opt/tomcat9',
   }
 }
