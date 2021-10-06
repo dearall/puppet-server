@@ -46,6 +46,7 @@ node 'test.sansovo.org'  {
 }
 
 node 'tomcat.sansovo.org' {
+  include adoptjdk11
   include tomcat9
 }
 
